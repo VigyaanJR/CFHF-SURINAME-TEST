@@ -3,7 +3,7 @@
   let currentLang = savedLang;
 
   const doc = document.documentElement;
-  const langToggle = document.getElementById('langToggle');
+  const langBtns = document.querySelectorAll('.lang-btn');
   const navToggle = document.getElementById('navToggle');
   const mainNav = document.getElementById('mainNav');
   const header = document.getElementById('siteHeader');
@@ -24,7 +24,7 @@
     currentLang = lang;
     localStorage.setItem('cfhf-lang', lang);
     doc.lang = TRANSLATIONS[lang]['html.lang'];
-    langToggle.checked = lang === 'en';
+    langBtns.forEach((b) => b.classList.toggle('active', b.getAttribute('data-lang') === lang));
 
     document.querySelectorAll('[data-i18n], [data-i18n-w], [data-i18n-c]').forEach((el) => {
       const key = el.getAttribute('data-i18n');
@@ -48,8 +48,10 @@
       : 'Care For Humanity Foundation Suriname | Together for a better future';
   };
 
-  langToggle.addEventListener('change', () => {
-    setLang(langToggle.checked ? 'en' : 'nl');
+  langBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      setLang(btn.getAttribute('data-lang'));
+    });
   });
 
   navToggle.addEventListener('click', () => {
