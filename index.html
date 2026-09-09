@@ -24,17 +24,51 @@
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Hoofdmenu">
-        <ul>
-          <li><a href="#home" data-i18n="nav.home">Home</a></li>
-          <li><a href="#over-ons" data-i18n="nav.about">Over ons</a></li>
-          <li><a href="#projecten" data-i18n="nav.projects">Projecten</a></li>
-          <li><a href="#impact" data-i18n="nav.impact">Impact</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li class="nav-item has-submenu">
+            <a href="#projecten" data-i18n="nav.work">Ons werk</a>
+            <ul class="submenu">
+              <li><a href="#projecten" data-i18n="work.suriname">Suriname</a></li>
+              <li><a href="#projecten" data-i18n="work.food">Voedsel &amp; basisbehoeften</a></li>
+              <li><a href="#projecten" data-i18n="work.edu">Educatie</a></li>
+              <li><a href="#projecten" data-i18n="work.medical">Medische zorg</a></li>
+              <li><a href="#projecten" data-i18n="work.relief">Noodhulp</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-submenu">
+            <a href="#over-ons" data-i18n="nav.about">Over ons</a>
+            <ul class="submenu">
+              <li><a href="#over-ons" data-i18n="about.sub.mission">Onze missie</a></li>
+              <li><a href="#over-ons" data-i18n="about.sub.team">Ons team</a></li>
+              <li><a href="#over-ons" data-i18n="about.sub.history">Geschiedenis</a></li>
+              <li><a href="#doneren" data-i18n="about.sub.blog">Nieuws &amp; blogs</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-submenu">
+            <a href="#contact" data-i18n="nav.help">Ik wil helpen</a>
+            <ul class="submenu">
+              <li><a href="#contact" data-i18n="help.volunteer">Word vrijwilliger</a></li>
+              <li><a href="#contact" data-i18n="help.partners">Partners</a></li>
+              <li><a href="#contact" data-i18n="help.jobs">Vacatures</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-submenu">
+            <a href="#doneren" data-i18n="nav.donate">Doneren</a>
+            <ul class="submenu">
+              <li><a href="#newsletter" data-i18n="donate.sub.newsletter">Nieuwsbrief</a></li>
+              <li><a href="#doneren" data-i18n="donate.sub.tax">Belastingvoordeel</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
-        <a href="#doneren" class="btn btn-gold btn-sm btn-donate-nav" data-i18n="nav.donate">Doneer</a>
       </nav>
 
       <div class="header-actions">
+        <a href="#doneren" class="btn btn-primary btn-sm btn-donate-nav">
+          <span class="heart-icon" aria-hidden="true">&#10084;</span>
+          <span data-i18n="donate.topbtn">DONEER</span>
+        </a>
         <label class="lang-switch" title="Nederlands / English">
           <span>NL</span>
           <input type="checkbox" id="langToggle" aria-label="Switch language">
@@ -49,186 +83,198 @@
   </header>
 
   <main id="main">
+
     <section class="hero" id="home">
-      <div class="hero-deco hero-deco-1" aria-hidden="true"></div>
-      <div class="hero-deco hero-deco-2" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <p class="hero-eyebrow" data-i18n="hero.eyebrow">Samen. Sterk. Voor Suriname.</p>
-          <h1 data-i18n="hero.title">Samen voor een <span class="text-gold">betere toekomst</span> van elk kind</h1>
-          <p class="hero-text" data-i18n="hero.subtitle">Care For Humanity Foundation Suriname steunt kinderen en gezinnen in Suriname met basisbehoeften, onderwijs en kansen op een mooie toekomst.</p>
-          <div class="hero-actions">
-            <a href="#doneren" class="btn btn-gold" data-i18n="hero.cta.donate">Doneer nu</a>
-            <a href="#over-ons" class="btn btn-outline-light" data-i18n="hero.cta.about">Meer over ons</a>
+      <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide hero-slide-1 active">
+          <div class="container hero-caption">
+            <h2 data-i18n="hero.slide1.title">Helping hands, in times of need!</h2>
+            <p data-i18n="hero.slide1.text">Jouw steun helpt kinderen en gezinnen in Suriname aan educatie, basisbehoeften, medische zorg en een betere toekomst.</p>
+            <a href="#doneren" class="btn btn-primary" data-i18n="hero.slide1.cta">Help vandaag nog &#8594;</a>
           </div>
         </div>
-        <div class="hero-card" aria-hidden="false">
-          <div class="hero-card-inner">
-            <span class="hero-card-label" data-i18n="hero.card.label">Dit jaar al</span>
-            <div class="hero-card-stat">
-              <span class="stat-number" data-count="1200" data-i18n-count data-i18n="hero.card.stat">1.200</span>
-              <span class="stat-plus">+</span>
-            </div>
-            <span class="hero-card-text" data-i18n="hero.card.text">kinderen bereikt door onze projecten</span>
+        <div class="hero-slide hero-slide-2">
+          <div class="container hero-caption">
+            <h2 data-i18n="hero.slide2.title">Kansen creëren voor ieder kind</h2>
+            <p data-i18n="hero.slide2.text">Met onderwijs, aandacht en een veilige omgeving geven we kinderen de kans om te groeien en te dromen.</p>
+            <a href="#over-ons" class="btn btn-primary" data-i18n="hero.slide2.cta">Lees meer</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section about" id="over-ons">
-      <div class="container about-inner">
-        <div class="about-body">
-          <p class="section-tag" data-i18n="about.tag">Over ons</p>
-          <h2 data-i18n="about.title">Eén klein gebaar, een wereld van verschil</h2>
-          <p data-i18n="about.p1">Wij geloven dat ieder kind recht heeft op eten, onderwijs en een veilige plek. Care For Humanity Foundation Suriname zet zich in voor de meest kwetsbare kinderen en gezinnen in Suriname.</p>
-          <p data-i18n="about.p2">Met hulp van donateurs en vrijwilligers bieden we directe hulp én bouwen we aan duurzame oplossingen die generaties verder reiken.</p>
-          <ul class="about-values">
-            <li>
-              <span class="value-icon" aria-hidden="true">&#10084;</span>
-              <div>
-                <h3 data-i18n="about.value1.title">Met liefde</h3>
-                <p data-i18n="about.value1.text">Elke maatregel doen we vanuit zorg voor de ander.</p>
-              </div>
-            </li>
-            <li>
-              <span class="value-icon" aria-hidden="true">&#9851;</span>
-              <div>
-                <h3 data-i18n="about.value2.title">Duurzaam</h3>
-                <p data-i18n="about.value2.text">Structurele hulp, niet alleen eenmalige ondersteuning.</p>
-              </div>
-            </li>
-            <li>
-              <span class="value-icon" aria-hidden="true">&#9993;</span>
-              <div>
-                <h3 data-i18n="about.value3.title">Samen</h3>
-                <p data-i18n="about.value3.text">Met partners, vrijwilligers en de gemeenschap zelf.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="about-visual" aria-hidden="true">
-          <div class="visual-card visual-main"></div>
-          <div class="visual-card visual-float">
-            <span class="visual-icon">&#128640;</span>
-            <strong data-i18n="about.badge.title">Kansen creëren</strong>
-            <span data-i18n="about.badge.text">voor een generatie</span>
+        <div class="hero-slide hero-slide-3">
+          <div class="container hero-caption">
+            <h2 data-i18n="hero.slide3.title">Water, voeding, huisvesting en zorg</h2>
+            <p data-i18n="hero.slide3.text">Wij ondersteunen gezinnen met eerste levensbehoeften, zodat niemand er alleen voor staat.</p>
+            <a href="#projecten" class="btn btn-primary" data-i18n="hero.slide3.cta">Lees meer</a>
           </div>
         </div>
       </div>
+      <button class="hero-arrow hero-arrow-prev" id="heroPrev" aria-label="Vorige">&#8249;</button>
+      <button class="hero-arrow hero-arrow-next" id="heroNext" aria-label="Volgende">&#8250;</button>
+      <div class="hero-dots" id="heroDots"></div>
     </section>
 
-    <section class="section projects" id="projecten">
+    <section class="featured-links">
+      <a href="#over-ons" class="featured-link featured-link-1">
+        <span data-i18n="featured.1.label">Meer informatie</span>
+        <strong data-i18n="featured.1.title">Over ons werk</strong>
+      </a>
+      <a href="#doneren" class="featured-link featured-link-2">
+        <span data-i18n="featured.2.label">Draag bij</span>
+        <strong data-i18n="featured.2.title">Doneer</strong>
+      </a>
+      <a href="#contact" class="featured-link featured-link-3">
+        <span data-i18n="featured.3.label">Word vrijwilliger</span>
+        <strong data-i18n="featured.3.title">Bekijk vacatures</strong>
+      </a>
+    </section>
+
+    <section class="what-we-do" id="over-ons">
       <div class="container">
-        <div class="section-head">
-          <p class="section-tag" data-i18n="projects.tag">Onze projecten</p>
-          <h2 data-i18n="projects.title">Waar we ons voor inzetten</h2>
-          <p class="section-sub" data-i18n="projects.subtitle">Drie pijlers die levens concreet verbeteren, vandaag en morgen.</p>
+        <div class="wwd-head">
+          <div class="wwd-title">
+            <h2 class="block-title" data-i18n-w="wwd.title" >Waar zetten wij<br>ons voor in</h2>
+          </div>
+          <div class="wwd-text">
+            <p data-i18n="wwd.text">Wij verbeteren duurzaam de levenskwaliteit van kinderen en gezinnen in Suriname. Dankzij donateurs en vrijwilligers realiseren we projecten voor basisbehoeften, schoon drinkwater, educatie, medische zorg en werkgelegenheid. Samen bouwen we aan kansen, waardigheid en een betere toekomst.</p>
+          </div>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-media project-media-1" aria-hidden="true"></div>
-            <div class="project-content">
-              <h3 data-i18n="projects.food.title">Voedsel en basisbehoeften</h3>
-              <p data-i18n="projects.food.text">Een warme maaltijd, kleding en basisbenodigdheden voor gezinnen die anders buiten de boot vallen.</p>
-              <a href="#doneren" class="btn btn-text" data-i18n="projects.link">Steun dit project&#8594;</a>
+
+        <div class="cause-grid">
+          <article class="cause-card">
+            <div class="cause-media cause-media-1" aria-hidden="true"></div>
+            <div class="cause-content">
+              <h3 class="post-title" data-i18n="cause.1.title">Voedsel &amp; basisbehoeften</h3>
+              <div class="meta-data"><span class="cause-target" data-i18n-c="cause.1.stat" data-count="1200">1.200</span> <span data-i18n="cause.1.label">kinderporties</span></div>
+              <a href="#doneren" class="btn btn-primary btn-sm" data-i18n="cause.readmore">Lees meer</a>
             </div>
           </article>
-          <article class="project-card">
-            <div class="project-media project-media-2" aria-hidden="true"></div>
-            <div class="project-content">
-              <h3 data-i18n="projects.edu.title">Onderwijs en schoolspullen</h3>
-              <p data-i18n="projects.edu.text">Boeken, schriften, laptops en beurzen zodat ieder kind kan leren en groeien.</p>
-              <a href="#doneren" class="btn btn-text" data-i18n="projects.link">Steun dit project&#8594;</a>
+          <article class="cause-card">
+            <div class="cause-media cause-media-2" aria-hidden="true"></div>
+            <div class="cause-content">
+              <h3 class="post-title" data-i18n="cause.2.title">Educatie</h3>
+              <div class="meta-data"><span class="cause-target" data-count="55">55</span> <span data-i18n="cause.2.label">schoolpakketten</span></div>
+              <a href="#doneren" class="btn btn-primary btn-sm" data-i18n="cause.readmore">Lees meer</a>
             </div>
           </article>
-          <article class="project-card">
-            <div class="project-media project-media-3" aria-hidden="true"></div>
-            <div class="project-content">
-              <h3 data-i18n="projects.health.title">Zorg en welzijn</h3>
-              <p data-i18n="projects.health.text">Toegang tot basiszorg, psychosociale hulp en fijne, veilige momenten voor kinderen.</p>
-              <a href="#doneren" class="btn btn-text" data-i18n="projects.link">Steun dit project&#8594;</a>
+          <article class="cause-card">
+            <div class="cause-media cause-media-3" aria-hidden="true"></div>
+            <div class="cause-content">
+              <h3 class="post-title" data-i18n="cause.3.title">Directe medische zorg</h3>
+              <div class="meta-data"><span class="cause-target" data-count="340">340</span> <span data-i18n="cause.3.label">gezinnen geholpen</span></div>
+              <a href="#doneren" class="btn btn-primary btn-sm" data-i18n="cause.readmore">Lees meer</a>
+            </div>
+          </article>
+          <article class="cause-card">
+            <div class="cause-media cause-media-4" aria-hidden="true"></div>
+            <div class="cause-content">
+              <h3 class="post-title" data-i18n="cause.4.title">Vrijwilligers &amp; ombuds</h3>
+              <div class="meta-data"><span class="cause-target" data-count="58">58</span> <span data-i18n="cause.4.label">vrijwilligers actief</span></div>
+              <a href="#contact" class="btn btn-primary btn-sm" data-i18n="cause.readmore">Lees meer</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section impact" id="impact">
+    <section class="newsletter" id="newsletter">
+      <form class="container newsletter-inner" id="newsletterForm">
+        <span class="newsletter-title" data-i18n="newsletter.title">Aanmelden voor de nieuwsbrief</span>
+        <div class="newsletter-input">
+          <input type="email" name="email" id="newsletterEmail" required data-i18n-ph="newsletter.placeholder" placeholder="Email..">
+          <span class="newsletter-msg" id="newsletterMsg"></span>
+          <button type="submit" class="btn btn-primary btn-sm" data-i18n="newsletter.btn">AANMELDEN</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="mission parallax" id="mission">
+      <div class="container mission-inner">
+        <div class="mission-text-block">
+          <p data-i18n="mission.text">Educatie en ontwikkeling voor kwetsbare kinderen in Suriname. Zij groeien vaak op in omstandigheden waarin kansen, educatie en persoonlijke ontwikkeling niet vanzelfsprekend zijn. Wij willen kinderen laten ontdekken wat zij kunnen en welke mogelijkheden er voor hen zijn. Met educatie, kennisontwikkeling en bewustwording stimuleren we zelfvertrouwen, eigenwaarde en persoonlijke groei.</p>
+          <a href="#over-ons" class="btn btn-primary" data-i18n="mission.cta">Lees meer over onze missie</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="spend" id="doneren">
       <div class="container">
-        <div class="section-head">
-          <p class="section-tag" data-i18n="impact.tag">Impact</p>
-          <h2 data-i18n="impact.title">Samen bereiken we meer</h2>
-        </div>
-        <div class="impact-grid">
-          <div class="impact-stat">
-            <span class="impact-number"><span data-count="1200">0</span>+</span>
-            <span class="impact-label" data-i18n="impact.stat1">kinderen geholpen</span>
-          </div>
-          <div class="impact-stat">
-            <span class="impact-number"><span data-count="340">0</span>+</span>
-            <span class="impact-label" data-i18n="impact.stat2">gezinnen ondersteund</span>
-          </div>
-          <div class="impact-stat">
-            <span class="impact-number"><span data-count="58">0</span></span>
-            <span class="impact-label" data-i18n="impact.stat3">vrijwilligers actief</span>
-          </div>
-          <div class="impact-stat">
-            <span class="impact-number"><span data-count="14">0</span></span>
-            <span class="impact-label" data-i18n="impact.stat4">projecten gerealiseerd</span>
+        <h2 class="block-title block-title-center" data-i18n="spend.title">Zo besteden wij uw donatie</h2>
+        <div class="spend-row">
+          <div class="spend-media" aria-hidden="true"></div>
+          <div class="spend-text">
+            <blockquote>
+              <p data-i18n="spend.text">Bij Care For Humanity Foundation Suriname worden donaties direct ingezet voor projecten die bijdragen aan het duurzaam verbeteren van de levenskwaliteit van kinderen en gezinnen in Suriname. Met uw bijdrage ondersteunen we basisbehoeften, schoon drinkwater, educatie, medische zorg en werkgelegenheid. Samen bouwen we aan duurzame verandering en een betere kwaliteit van leven.</p>
+            </blockquote>
+            <div class="donate-panel">
+              <p class="section-tag" data-i18n="donate.tag">Steun ons</p>
+              <h3 data-i18n="donate.title">Help vandaag een kinderleven veranderen</h3>
+              <div class="donate-options">
+                <button class="amount-btn" data-amount="10">&euro; 10</button>
+                <button class="amount-btn" data-amount="25">&euro; 25</button>
+                <button class="amount-btn" data-amount="50">&euro; 50</button>
+                <button class="amount-btn amount-custom" data-amount="custom" data-i18n="donate.custom">Eigen bedrag</button>
+              </div>
+              <button class="btn btn-primary" id="donateConfirm" data-i18n="donate.btn">Doneer nu</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section donate" id="doneren">
-      <div class="container donate-inner">
-        <div class="donate-content">
-          <p class="section-tag light" data-i18n="donate.tag">Steun ons</p>
-          <h2 data-i18n="donate.title">Help mee. Verander vandaag een kinderleven.</h2>
-          <p data-i18n="donate.text">Ieder bedrag maakt verschil. Jouw bijdrage gaat direct naar waar het het hardst nodig is.</p>
-          <div class="donate-options">
-            <button class="amount-btn" data-amount="10">&euro; 10</button>
-            <button class="amount-btn" data-amount="25">&euro; 25</button>
-            <button class="amount-btn" data-amount="50">&euro; 50</button>
-            <button class="amount-btn amount-custom" data-amount="custom" data-i18n="donate.custom">Eigen bedrag</button>
+    <section class="news lgray-bg">
+      <div class="container">
+        <div class="news-head">
+          <div class="news-title-col">
+            <h2 class="block-title" data-i18n="news.title">Laatste nieuws</h2>
+            <p data-i18n="news.text">Bekijk hier het laatste nieuws, inspirerende verhalen en actuele ontwikkelingen rondom onze projecten. Volg ons ook op social media!</p>
           </div>
-          <button class="btn btn-gold btn-lg" id="donateConfirm" data-i18n="donate.btn">Doneer nu</button>
-          <p class="donate-note" data-i18n="donate.note">Je ontvangt een bevestiging per e-mail. Samen maken we het verschil.</p>
-        </div>
-        <div class="donate-visual" aria-hidden="true">
-          <div class="donate-rings">
-            <span class="ring ring-1"></span>
-            <span class="ring ring-2"></span>
-            <span class="ring ring-3"></span>
-            <span class="ring-heart">&#10084;</span>
+          <div class="news-cards-col">
+            <article class="news-card">
+              <div class="news-card-media news-card-media-1" aria-hidden="true"></div>
+              <div class="news-card-content">
+                <h3 class="post-title" data-i18n="news.1.title">De cirkel rond: een schooljaar vol kansen</h3>
+                <span class="meta-data" data-i18n="news.1.date">Geplaatst op 28-02-2026</span>
+              </div>
+            </article>
+            <article class="news-card">
+              <div class="news-card-media news-card-media-2" aria-hidden="true"></div>
+              <div class="news-card-content">
+                <h3 class="post-title" data-i18n="news.2.title">Samen eten, samen groeien</h3>
+                <span class="meta-data" data-i18n="news.2.date">Geplaatst op 03-02-2026</span>
+              </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section contact" id="contact">
+    <section class="message parallax parallax-light">
+      <h2 data-i18n="message.text">Making someone smile is the most<br>beautiful thing in this world</h2>
+    </section>
+
+    <section class="volunteer-cta">
+      <div class="container volunteer-inner">
+        <div class="volunteer-logo" aria-hidden="true">
+          <span class="brand-mark">C</span>
+        </div>
+        <div class="volunteer-text">
+          <h4 data-i18n="volunteer.text">Samen kunnen we meer bereiken. Word vrijwilliger, sponsor of ambassadeur en help Care For Humanity levens te veranderen.</h4>
+          <a href="#contact" class="btn btn-primary btn-pink" data-i18n="volunteer.cta">Word vrijwilliger</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
       <div class="container contact-inner">
         <div class="contact-info">
           <p class="section-tag" data-i18n="contact.tag">Contact</p>
           <h2 data-i18n="contact.title">Kom in gesprek</h2>
           <p data-i18n="contact.text">Vragen, vrijwilligheid of een samenwerking? We horen graag van je.</p>
           <ul class="contact-list">
-            <li>
-              <span class="contact-icon" aria-hidden="true">&#9993;</span>
-              <a href="mailto:info@cfhf-suriname.org" data-i18n="contact.email">info@cfhf-suriname.org</a>
-            </li>
-            <li>
-              <span class="contact-icon" aria-hidden="true">&#9742;</span>
-              <a href="tel:+5970000000" data-i18n="contact.phone">+597 000 0000</a>
-            </li>
-            <li>
-              <span class="contact-icon" aria-hidden="true">&#9873;</span>
-              <span data-i18n="contact.location">Paramaribo, Suriname</span>
-            </li>
-            <li>
-              <span class="contact-icon" aria-hidden="true">&#9203;</span>
-              <span data-i18n="contact.hours">Ma-vr: 09.00 - 17.00 uur</span>
-            </li>
+            <li><span class="contact-icon" aria-hidden="true">&#9993;</span><a href="mailto:info@cfhf-suriname.org" data-i18n="contact.email">info@cfhf-suriname.org</a></li>
+            <li><span class="contact-icon" aria-hidden="true">&#9742;</span><a href="tel:+5970000000" data-i18n="contact.phone">+597 000 0000</a></li>
+            <li><span class="contact-icon" aria-hidden="true">&#9873;</span><span data-i18n="contact.location">Paramaribo, Suriname</span></li>
+            <li><span class="contact-icon" aria-hidden="true">&#9203;</span><span data-i18n="contact.hours">Ma-vr: 09.00 - 17.00 uur</span></li>
           </ul>
           <div class="contact-socials">
             <a href="#" aria-label="Facebook" class="social-btn">f</a>
@@ -257,7 +303,7 @@
             <label for="message" data-i18n="form.message">Bericht</label>
             <textarea id="message" name="message" rows="5" required data-i18n-ph="form.messagePh" placeholder="Schrijf hier je bericht..."></textarea>
           </div>
-          <button type="submit" class="btn btn-gold btn-lg" data-i18n="form.submit">Bericht versturen</button>
+          <button type="submit" class="btn btn-primary btn-lg" data-i18n="form.submit">Bericht versturen</button>
           <p class="form-status" id="formStatus" role="status"></p>
         </form>
       </div>
@@ -265,41 +311,55 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-top">
-      <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true">C</span>
-        <div class="brand-text">
-          <span class="brand-name" data-i18n="brand.name">Care For Humanity</span>
-          <span class="brand-sub" data-i18n="brand.sub">Foundation Suriname</span>
-        </div>
-        <p data-i18n="footer.about">Samen bouwen aan een veilige, kansrijke toekomst voor kinderen en gezinnen in Suriname.</p>
-      </div>
+    <div class="container footer-cols">
       <div class="footer-col">
-        <h4 data-i18n="footer.links.t1">Menu</h4>
+        <h4 data-i18n="footer.col1.title">Transparantie</h4>
         <ul>
-          <li><a href="#home" data-i18n="nav.home">Home</a></li>
-          <li><a href="#over-ons" data-i18n="nav.about">Over ons</a></li>
-          <li><a href="#projecten" data-i18n="nav.projects">Projecten</a></li>
-          <li><a href="#doneren" data-i18n="nav.donate">Doneer</a></li>
+          <li><a href="#" data-i18n="footer.col1.privacy">Privacy</a></li>
+          <li><a href="#" data-i18n="footer.col1.cookies">Cookies</a></li>
+          <li><a href="#" data-i18n="footer.col1.reports">Jaarverslagen</a></li>
+          <li><a href="#" data-i18n="footer.col1.policy">Beleidsplannen</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4 data-i18n="footer.links.t2">Contact</h4>
+        <h4 data-i18n="footer.col2.title">CFHF</h4>
         <ul>
-          <li><a href="mailto:info@cfhf-suriname.org">info@cfhf-suriname.org</a></li>
-          <li><a href="tel:+5970000000">+597 000 0000</a></li>
-          <li data-i18n="contact.location">Paramaribo, Suriname</li>
+          <li><a href="#over-ons" data-i18n="footer.col2.about">Over ons</a></li>
+          <li><a href="#over-ons" data-i18n="footer.col2.mission">Onze missie</a></li>
+          <li><a href="#projecten" data-i18n="footer.col2.work">Ons werk</a></li>
+          <li><a href="#over-ons" data-i18n="footer.col2.team">Het team</a></li>
+          <li><a href="#over-ons" data-i18n="footer.col2.history">Geschiedenis</a></li>
         </ul>
       </div>
-      <div class="footer-col footer-cta">
-        <h4 data-i18n="footer.links.t3">Steun ons</h4>
-        <p data-i18n="footer.cta.text">Jouw donatie maakt direct verschil.</p>
-        <a href="#doneren" class="btn btn-gold btn-sm" data-i18n="nav.donate">Doneer</a>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col3.title">Bijdragen</h4>
+        <ul>
+          <li><a href="#contact" data-i18n="footer.col3.partners">Partners</a></li>
+          <li><a href="#contact" data-i18n="footer.col3.jobs">Vacatures</a></li>
+          <li><a href="#doneren" data-i18n="footer.col3.donate">Doneren</a></li>
+          <li><a href="#newsletter" data-i18n="footer.col3.newsletter">Nieuwsbrief</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col4.title">Overige gegevens</h4>
+        <ul class="footer-regs">
+          <li><strong data-i18n="footer.col4.sbi">RSIN</strong><a href="#">000000000</a></li>
+          <li><strong data-i18n="footer.col4.kvk">KVK</strong><a href="#">00000000</a></li>
+          <li><strong>IBAN</strong><span>NL00 BANK 0000 0000 00</span></li>
+          <li><strong>BTW</strong><span>NL000000000B00</span></li>
+        </ul>
+        <ul class="footer-socials">
+          <li><a class="social-btn" href="#" aria-label="LinkedIn">in</a></li>
+          <li><a class="social-btn" href="#" aria-label="Facebook">f</a></li>
+          <li><a class="social-btn" href="#" aria-label="YouTube">&#9658;</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p>&copy; <span id="year"></span> Care For Humanity Foundation Suriname. <span data-i18n="footer.rights">Alle rechten voorbehouden.</span></p>
+        <p>&copy; <span id="year">2026</span> Care For Humanity Foundation Suriname. <span data-i18n="footer.rights">Alle rechten voorbehouden.</span></p>
+        <p class="footer-made"><span data-i18n="footer.made">Gemaakt met</span> <span class="heart-inline" aria-hidden="true">&#10084;</span> <span data-i18n="footer.credit">door Care For Humanity</span></p>
+        <button id="backToTop" class="back-to-top" aria-label="Terug naar boven">&#8657;</button>
       </div>
     </div>
   </footer>
@@ -312,7 +372,7 @@
       <p class="modal-amount-label" data-i18n="modal.amountLabel">Je gekozen bedrag:</p>
       <p class="modal-amount" id="modalAmount">&euro; 0</p>
       <p data-i18n="modal.text">Je donatie maakt een direct verschil voor kinderen in Suriname. Binnenkort ontvang je onze gegevens om de donatie te voltooien. Bedankt voor je hulp!</p>
-      <a href="mailto:info@cfhf-suriname.org?subject=Donatie%20Care%20For%20Humanity" class="btn btn-gold" data-i18n="modal.btn">Doneer via e-mail</a>
+      <a href="mailto:info@cfhf-suriname.org?subject=Donatie%20Care%20For%20Humanity" class="btn btn-primary" data-i18n="modal.btn">Doneer via e-mail</a>
       <button class="btn btn-ghost" id="modalLater" data-i18n="modal.later">Ik doneer gelijk</button>
     </div>
   </div>
